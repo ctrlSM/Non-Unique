@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      JavaScript | Get all non-unique values.
+    </title>
+  </head>
+
+  <body style="text-align:center;" id="body">
+    <h1 style="color:green;">
+      Non Unique Project
+    </h1>
+    <p id="GFG_UP" style="font-size: 16px;"></p>
+    <button onclick="gfg_Run()">
+      click here
+    </button>
+    <p
+      id="GFG_DOWN"
+      style="color:green;  
+                            font-size: 20px;  
+                            font-weight: bold;"
+    ></p>
+    <script>
+      var el_up = document.getElementById("GFG_UP");
+      var el_down = document.getElementById("GFG_DOWN");
+      var arr = [89, 89, 11, 2, 3, 4, 2, 4, 5, 7];
+      var sort_arr = arr.slice().sort();
+      var res = [];
+      el_up.innerHTML = "Original Array = [" + arr + "]";
+
+      function gfg_Run() {
+        for (var i = 0; i < sort_arr.length - 1; i++) {
+          if (sort_arr[i + 1] == sort_arr[i]) {
+            res.push(sort_arr[i]);
+          }
+        }
+        el_down.innerHTML = "Non-Unique values are = " + res;
+      }
+    </script>
+  </body>
+</html>
+
+<h1 class="text-light">Pure CSS Animated Gradient Background</h1>
+
+<div class="btn-group mt-2 mb-4" role="group" aria-label="actionButtons">
+  <a
+    href="https://codepen-api-export-production.s3.us-west-2.amazonaws.com/zip/PEN/pyBNzX/1578778289271/pure-css-gradient-background-animation.zip"
+    class="d-block btn btn-outline-light"
+    download
+    ><i class="fas fa-file-download mr-2"></i>Download Source</a
+  >
+  <a
+    href="https://manuelpinto.in"
+    target="_blank"
+    class="d-block btn btn-outline-light"
+    >Visit my Website<i class="fas fa-external-link-square-alt ml-2"></i
+  ></a>
+</div>
+
+<h6 class="text-light small font-weight-bold">
+  <i class="fas fa-code"></i> with <i class="fas fa-heart"></i> by Manuel Pinto
+</h6>
+
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js"
+  integrity="sha256-qM7QTJSlvtPSxVRjVWNM2OfTAz/3k5ovHOKmKXuYMO4="
+  crossorigin="anonymous"
+></script>
+// By:
+// Manuel Pinto
+// https://manuelpinto.in
+/* CSS files add styling rules to your content */
+
+body {
+  font-family: helvetica, arial, sans-serif;
+  margin: 2em;
+}
+
+h1 {
+  font-style: italic;
+  color: #373fff;
+}
+
+body {
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
